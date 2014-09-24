@@ -14,6 +14,9 @@ gem 'jquery-rails'
 
 gem 'devise'
 
+# foreign key helpers
+gem 'foreigner'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'

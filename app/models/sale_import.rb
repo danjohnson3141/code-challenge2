@@ -22,7 +22,6 @@ class SaleImport
 
   def save
     imported_sales.each do |imported_sale|
-      binding.pry
       if valid_columns?(imported_sale.to_hash.keys)
         sale = Sale.create(imported_sale.to_hash)
         unless sale.valid?
@@ -38,12 +37,12 @@ class SaleImport
   end
 
   def imported_sales
+    rows = []
     begin
       col_sep = CSV.read(file.path).to_s.include?("\\t") ? "\t" : ","
     rescue CSV::MalformedCSVError
       return []
     end
-    rows = []
     CSV.foreach(file.path, headers: true, header_converters: :symbol, converters: :all, col_sep: col_sep) do |row|
       rows << row
     end
