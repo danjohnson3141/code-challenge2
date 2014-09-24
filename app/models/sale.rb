@@ -1,6 +1,8 @@
 class Sale < ActiveRecord::Base
   
-  validates_presence_of :item_price
+  validates :item_price, presence: true
+  validates :purchaser_name, presence: true
+  validates :merchant_name, presence: true
   
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
@@ -10,4 +12,5 @@ class Sale < ActiveRecord::Base
       end
     end
   end
+
 end

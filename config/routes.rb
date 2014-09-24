@@ -1,4 +1,5 @@
 Store::Application.routes.draw do
+  devise_for :users
   resources :products
   resources :product_imports
   # root to: 'products#index'
