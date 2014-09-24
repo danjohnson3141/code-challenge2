@@ -1,10 +1,9 @@
 Store::Application.routes.draw do
   devise_for :users
-  resources :products
-  resources :product_imports
-  # root to: 'products#index'
 
   resources :sales
+  get 'event_prizes/:id', to: 'event_prizes#show'
+  get "sales/log_file/:log_file_id", to: "sales#index"
   resources :sale_imports
   root to: 'sales#index'
 end

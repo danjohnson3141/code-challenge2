@@ -7,7 +7,8 @@ class SaleImportsController < ApplicationController
     log_file = LogFile.create(creator: current_user, updater: current_user)
     @sale_import = SaleImport.new(params[:sale_import])
     if @sale_import.save(current_user, log_file)
-      redirect_to root_url, notice: import_message(log_file)
+      @sale = Sale.where(log_file: log_file)
+      redirect_to "/sales/log_file/#{log_file.id}", notice: import_message(log_file), :method => :get
     else
       render :new
     end
