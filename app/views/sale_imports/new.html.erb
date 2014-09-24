@@ -4,9 +4,9 @@
 <hr />
 <table>
 <tr>
-<th>import header</th>
-<th>table column name</th>
-<th>type</th>
+<th class="col-hdr">import header</th>
+<th class="col-hdr">table column name</th>
+<th class="col-hdr">type</th>
 </tr>
   <% Sale.columns.each do |column| %>
     <% if !["created_at", "updated_at", "id"].include? column.name %>

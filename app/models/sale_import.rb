@@ -17,22 +17,27 @@ class SaleImport
   end
 
   def valid_columns?(columns)
-    (@valid_columns - columns).count == 5
+    (@valid_columns - columns).count == 6
   end
 
-  def save(current_user)
+  def save(current_user, log_file)
+    rows_imported = 0
+    gross_revenue = 0
     imported_sales.each do |imported_sale|
       if valid_columns?(imported_sale.to_hash.keys)
-        sale = Sale.create(imported_sale.to_hash.merge!(creator: current_user, updater: current_user))
+        sale = Sale.create(imported_sale.to_hash.merge!(creator: current_user, updater: current_user, log_file: log_file))
         unless sale.valid?
           errors.add(:error, "Row: #{sale.errors.messages.to_s}")
           return false
         end
+        rows_imported += 1
+        gross_revenue += (sale.item_price * sale.purchase_count)
       else
         errors.add(:error, "Invalid columns")
         return false
       end
     end
+    log_file.update(rows_imported: rows_imported, gross_revenue: gross_revenue)
     true
   end
 

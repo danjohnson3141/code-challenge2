@@ -1,5 +1,7 @@
 class Sale < ActiveRecord::Base
   include User::Associations
+
+  belongs_to :log_file
   
   validates :item_price, presence: true
   validates :purchaser_name, presence: true
