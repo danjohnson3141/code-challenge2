@@ -1,0 +1,30 @@
+<h1>Sales</h1>
+
+<p>
+  Download:
+  <%= link_to "CSV", sales_path(format: "csv") %> |
+  <%= link_to "Excel", sales_path(format: "xls") %>
+</p>
+
+<table id="sales">
+  <tr>
+    <th>Purchaser<br />Name</th>
+    <th>Item<br />Description</th>
+    <th>Item<br />Price</th>
+    <th>Purchase<br />Count</th>
+    <th>Merchant<br />Name</th>
+    <th>Merchant<br />Address</th>
+  </tr>
+<% @sales.each do |sale| %>
+  <tr>
+    <td><%= sale.purchaser_name %></td>
+    <td><%= sale.item_description %></td>
+    <td><%= number_to_currency(sale.item_price) %></td>
+    <td><%= sale.purchase_count %></td>
+    <td><%= sale.merchant_name %></td>
+    <td><%= sale.merchant_address %></td>
+  </tr>
+<% end %>
+</table>
+
+<p><%= link_to "Import Sales Data", new_sale_import_path %></p>
