@@ -8,12 +8,14 @@
 
 <table id="sales">
   <tr>
-    <th>Purchaser<br />Name</th>
-    <th>Item<br />Description</th>
-    <th>Item<br />Price</th>
-    <th>Purchase<br />Count</th>
-    <th>Merchant<br />Name</th>
-    <th>Merchant<br />Address</th>
+    <th class="col-hdr">Purchaser<br />Name</th>
+    <th class="col-hdr">Item<br />Description</th>
+    <th class="col-hdr">Item<br />Price</th>
+    <th class="col-hdr">Purchase<br />Count</th>
+    <th class="col-hdr">Merchant<br />Name</th>
+    <th class="col-hdr">Merchant<br />Address</th>
+    <th class="col-hdr"><br />Created By</th>
+    <th class="col-hdr"><br />Created At</th>
   </tr>
 <% @sales.each do |sale| %>
   <tr>
@@ -23,6 +25,8 @@
     <td><%= sale.purchase_count %></td>
     <td><%= sale.merchant_name %></td>
     <td><%= sale.merchant_address %></td>
+    <td><%= sale.creator.email %></td>
+    <td><%= sale.created_at %></td>
   </tr>
 <% end %>
 </table>

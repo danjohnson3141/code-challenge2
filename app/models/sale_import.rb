@@ -9,21 +9,21 @@ class SaleImport
   def initialize(attributes = {})
     attributes.each { |name, value| send("#{name}=", value) }
     @errors = ActiveModel::Errors.new(self)
-    @valid_columns = Sale.columns.map(&:name)
+    @valid_columns = Sale.columns.map(&:name).map(&:to_sym)
   end
 
   def persisted?
     false
   end
 
-  def valid_columns?(column)
-    @valid_columns.include? column
+  def valid_columns?(columns)
+    (@valid_columns - columns).count == 5
   end
 
-  def save
+  def save(current_user)
     imported_sales.each do |imported_sale|
       if valid_columns?(imported_sale.to_hash.keys)
-        sale = Sale.create(imported_sale.to_hash)
+        sale = Sale.create(imported_sale.to_hash.merge!(creator: current_user, updater: current_user))
         unless sale.valid?
           errors.add(:error, "Row: #{sale.errors.messages.to_s}")
           return false

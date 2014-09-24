@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924185329) do
+ActiveRecord::Schema.define(version: 20140924221935) do
+
+  create_table "log_files", force: true do |t|
+    t.integer  "rows_imported"
+    t.decimal  "gross_revenue", precision: 2, scale: 8
+    t.integer  "created_by"
+    t.integer  "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sales", force: true do |t|
     t.string   "purchaser_name"
@@ -22,6 +31,8 @@ ActiveRecord::Schema.define(version: 20140924185329) do
     t.string   "merchant_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "created_by"
+    t.integer  "updated_by"
   end
 
   create_table "users", force: true do |t|

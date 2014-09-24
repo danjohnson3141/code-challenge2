@@ -1,2 +1,11 @@
 # encoding: UTF-8
-User.create(email: 'admin@example.com', password: 'password')
+Bullet = "\u2022"
+
+if Rails.env != "test"
+  puts "\n#{Bullet} Seeding Database:".green
+  puts '--------------------------------------------------------------------------------------------'.green
+  Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
+end
+
+puts '--------------------------------------------------------------------------------------------'.green
+puts "Seeding complete"

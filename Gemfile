@@ -17,6 +17,9 @@ gem 'devise'
 # foreign key helpers
 gem 'foreigner'
 
+# color text output helper
+gem 'colorize'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'
