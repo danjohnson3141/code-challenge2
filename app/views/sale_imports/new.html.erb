@@ -9,7 +9,7 @@
 <th class="col-hdr">type</th>
 </tr>
   <% Sale.columns.each do |column| %>
-    <% if !["created_at", "updated_at", "id"].include? column.name %>
+    <% if !["created_at", "updated_at", "id", "created_by", "updated_by", "log_file_id"].include? column.name %>
       <tr>
         <td><%= column.name.humanize.downcase %></td>
         <td><%= column.name %></td>
@@ -35,5 +35,6 @@
   <div class="field">
     <%= f.file_field :file %>
   </div>
-  <div class="buttons"><%= f.submit " Import " %></div>
+  <div class="buttons"><%= f.submit " Import ", class: "button" %></div>
 <% end %>
+<p><%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: 'button danger' %></p>

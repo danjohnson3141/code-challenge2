@@ -1,34 +1,36 @@
-<h1>Sales</h1>
+<h1>Sales (<%= @sales.count %>)</h1>
 
-<p>
-  Download:
-  <%= link_to "CSV", sales_path(format: "csv") %> |
-  <%= link_to "Excel", sales_path(format: "xls") %>
-</p>
-
-<table id="sales">
-  <tr>
-    <th class="col-hdr">Purchaser<br />Name</th>
-    <th class="col-hdr">Item<br />Description</th>
-    <th class="col-hdr">Item<br />Price</th>
-    <th class="col-hdr">Purchase<br />Count</th>
-    <th class="col-hdr">Merchant<br />Name</th>
-    <th class="col-hdr">Merchant<br />Address</th>
-    <th class="col-hdr"><br />Created By</th>
-    <th class="col-hdr"><br />Created At</th>
-  </tr>
-<% @sales.each do |sale| %>
-  <tr>
-    <td><%= sale.purchaser_name %></td>
-    <td><%= sale.item_description %></td>
-    <td><%= number_to_currency(sale.item_price) %></td>
-    <td><%= sale.purchase_count %></td>
-    <td><%= sale.merchant_name %></td>
-    <td><%= sale.merchant_address %></td>
-    <td><%= sale.creator.email %></td>
-    <td><%= sale.created_at %></td>
-  </tr>
+<% if @sales.present? %>
+  
+  <table id="sales">
+    <tr>
+      <th class="col-hdr">Purchaser<br />Name</th>
+      <th class="col-hdr">Item<br />Description</th>
+      <th class="col-hdr">Item<br />Price</th>
+      <th class="col-hdr">Purchase<br />Count</th>
+      <th class="col-hdr">Merchant<br />Name</th>
+      <th class="col-hdr">Merchant<br />Address</th>
+      <th class="col-hdr"><br />Created By</th>
+      <th class="col-hdr"><br />Created At</th>
+    </tr>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.purchaser_name %></td>
+        <td><%= sale.item_description %></td>
+        <td><%= number_to_currency(sale.item_price) %></td>
+        <td><%= sale.purchase_count %></td>
+        <td><%= sale.merchant_name %></td>
+        <td><%= sale.merchant_address %></td>
+        <td><%= sale.creator.email %></td>
+        <td><%= sale.created_at %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <br />
+  <p>No newly uploaded sales data present. Click "Import Sales Data" to upload a new file.</p>
+  <br />
 <% end %>
-</table>
 
-<p><%= link_to "Import Sales Data", new_sale_import_path %></p>
+<p><%= button_to "Import Sales Data", new_sale_import_path, class: "button", method: :get %></p>
+<p><%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: 'button danger' %></p>

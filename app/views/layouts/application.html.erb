@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Products</title>
+    <title>Sales</title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
@@ -12,8 +12,7 @@
         <%= content_tag :div, msg, id: "flash_#{name}", class: "alert alert-success success-msg" %>
       <% end %>
       <%= yield %>
-      <br />
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      
     </div>
   </body>
 </html>
