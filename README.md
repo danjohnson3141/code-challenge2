@@ -23,6 +23,10 @@ The next page is the most recent upload page. This is were the last file uploade
 
 <a href='http://postimg.org/image/kv0ds28q3/' target='_blank'><img src='http://s25.postimg.org/kv0ds28q3/code_challenge_index_before.jpg' border='0' alt="code challenge index before" /></a>
 
+The Sales Data Import page will now be displayed. This page describes the types of files that can be uploaded and what fields  and field types are expected. To upload a new file click the "Choose File" button and select a file.
+
+<a href='http://postimg.org/image/s9ppkfuln/' target='_blank'><img src='http://s25.postimg.org/s9ppkfuln/code_challenge_sign_in.jpg' border='0' alt="code challenge sign in" /></a>
+
 Two sample files have been included: `example_data.csv` and `example_data.tab`.
 
 <a href='http://postimg.org/image/8dtq4wdkb/' target='_blank'><img src='http://s25.postimg.org/8dtq4wdkb/code_challenge_index_after.jpg' border='0' alt="code challenge index after" /></a>
