@@ -23,11 +23,11 @@ The next page is the most recent upload page. This is were the last file uploade
 
 <a href='http://postimg.org/image/kv0ds28q3/' target='_blank'><img src='http://s25.postimg.org/kv0ds28q3/code_challenge_index_before.jpg' border='0' alt="code challenge index before" /></a>
 
-The Sales Data Import page will now be displayed. This page describes the types of files that can be uploaded and what fields  and field types are expected. To upload a new file click the "Choose File" button and select a file.
+The Sales Data Import page will now be displayed. This page describes the types of files that can be uploaded and what fields  and field types are expected. To upload a new file click the "Choose File" button and select a file. Two sample files have been included in the `/app` directory: `example_data.csv` and `example_data.tab`.
 
-[url=http://postimg.org/image/5dhh23rmz/][img=http://s25.postimg.org/5dhh23rmz/code_challenge_upload.jpg][/url]
+<a href='http://postimg.org/image/5dhh23rmz/' target='_blank'><img src='http://s25.postimg.org/5dhh23rmz/code_challenge_upload.jpg' border='0' alt="code challenge upload" /></a>
 
-Two sample files have been included: `example_data.csv` and `example_data.tab`.
+
 
 <a href='http://postimg.org/image/8dtq4wdkb/' target='_blank'><img src='http://s25.postimg.org/8dtq4wdkb/code_challenge_index_after.jpg' border='0' alt="code challenge index after" /></a>
 
