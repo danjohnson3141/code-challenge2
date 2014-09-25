@@ -1,6 +1,6 @@
 # CSV File Upload and Parse
 
-Thanks to <a href="http://railscasts.com/episodes/396-importing-csv-and-excel">RailsCasts Example Application</a>
+Thanks to this <a href="http://railscasts.com/episodes/396-importing-csv-and-excel">RailsCasts</a> for giving me a pretty good starting point.
 
 Run these commands to try it out.
 
