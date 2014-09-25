@@ -25,7 +25,7 @@ The next page is the most recent upload page. This is were the last file uploade
 
 The Sales Data Import page will now be displayed. This page describes the types of files that can be uploaded and what fields  and field types are expected. To upload a new file click the "Choose File" button and select a file.
 
-<a href='http://postimg.org/image/s9ppkfuln/' target='_blank'><img src='http://s25.postimg.org/s9ppkfuln/code_challenge_sign_in.jpg' border='0' alt="code challenge sign in" /></a>
+[url=http://postimg.org/image/5dhh23rmz/][img=http://s25.postimg.org/5dhh23rmz/code_challenge_upload.jpg][/url]
 
 Two sample files have been included: `example_data.csv` and `example_data.tab`.
 
