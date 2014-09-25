@@ -19,6 +19,10 @@ The first thing you will see is the user sign in page.
 
 Sign in with email: `admin@example.com` and password: `password` or register a new account with the "sign up" link.
 
+The next page is the most recent upload page. This is were the last file uploaded will show. To upload a new file simply click the "Import Sales Data" button.
+
+<a href='http://postimg.org/image/kv0ds28q3/' target='_blank'><img src='http://s25.postimg.org/kv0ds28q3/code_challenge_index_before.jpg' border='0' alt="code challenge index before" /></a>
+
 Two sample files have been included: `example_data.csv` and `example_data.tab`.
 
 <a href='http://postimg.org/image/8dtq4wdkb/' target='_blank'><img src='http://s25.postimg.org/8dtq4wdkb/code_challenge_index_after.jpg' border='0' alt="code challenge index after" /></a>
