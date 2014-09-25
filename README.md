@@ -27,7 +27,7 @@ The Sales Data Import page will now be displayed. This page describes the types 
 
 <a href='http://postimg.org/image/5dhh23rmz/' target='_blank'><img src='http://s25.postimg.org/5dhh23rmz/code_challenge_upload.jpg' border='0' alt="code challenge upload" /></a>
 
-
+After selecting a file and clicking upload the file will be uploaded, parsed, and stored in the database. A list of rows created and a summary of total rows added and gross revenue will be shown at the top of the screen.
 
 <a href='http://postimg.org/image/8dtq4wdkb/' target='_blank'><img src='http://s25.postimg.org/8dtq4wdkb/code_challenge_index_after.jpg' border='0' alt="code challenge index after" /></a>
 
