@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'colorize'
+require 'capybara/rails'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
@@ -27,6 +28,8 @@ def bullet
 end
 
 RSpec.configure do |config|
+  config.include ValidUserHelper, :type => :controller
+  config.include ValidUserRequestHelper, :type => :request
   config.before(:suite) do
     puts "Before suite setup:".yellow
   end
@@ -34,11 +37,7 @@ RSpec.configure do |config|
   config.after(:suite) do
     puts
     puts "After suite cleanup:".yellow
-  end
-
-  config.after(:all) do
-    truncate_non_seed_tables
-  end  
+  end 
 
   config.use_transactional_fixtures = true
 
