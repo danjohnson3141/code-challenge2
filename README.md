@@ -12,6 +12,8 @@ rails s
 visit your localhost:3000 or whichever port your server is running on
 ```
 
+Requires Ruby 1.9.2 or later to run.
+
 ###Usage Instructions:
 The first thing you will see is the user sign in page.
 
@@ -31,4 +33,6 @@ After selecting a file and clicking upload the file will be uploaded, parsed, an
 
 <a href='http://postimg.org/image/8dtq4wdkb/' target='_blank'><img src='http://s25.postimg.org/8dtq4wdkb/code_challenge_index_after.jpg' border='0' alt="code challenge index after" /></a>
 
-Requires Ruby 1.9.2 or later to run.
+At this point you can upload more data or simply bask in the splendor of your new uploaded data.
+
+
