@@ -14,7 +14,9 @@ visit your localhost:3000 or whichever port your server is running on
 
 ###Usage Instructions:
 The first thing you will see is the user sign in page.
+
 <a href='http://postimg.org/image/s9ppkfuln/' target='_blank'><img src='http://s25.postimg.org/s9ppkfuln/code_challenge_sign_in.jpg' border='0' alt="code challenge sign in" /></a>
+
 Sign in with email: `admin@example.com` and password: `password` or register a new account with the "sign up" link.
 
 Two sample files have been included: `example_data.csv` and `example_data.tab`.
